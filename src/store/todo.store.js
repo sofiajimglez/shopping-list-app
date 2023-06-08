@@ -7,10 +7,7 @@ const Filters = {
 };
 
 const state = {
-  todos: [
-    new Todo('Patatas'),
-    new Todo('Tomates')
-  ],
+  todos: [],
   filter: Filters.All
 };
 
@@ -101,6 +98,7 @@ export default {
   getTodos,
   initStore,
   loadStore,
+  saveToLocalStorage,
   setFilter,
   toggleTodo
 };
