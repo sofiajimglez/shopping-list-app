@@ -1,12 +1,13 @@
 import html from './app.html?raw'; //?raw brings the raw content of the file
 import todoStore from '../store/todo.store';
-import { renderTodos } from './use-cases/renderTodos';
+import { renderTodos, renderPending } from './use-cases';
 
 const ElementIDs = {
   TodoList: '.todo-list',
   NewTodoInput: '#new-todo-input',
   ClearCompleted: '.clear-completed',
-  TodoFilters: '.filter'
+  TodoFilters: '.filter',
+  PendingLabel: '#pending-count'
 }
 
 /**
@@ -18,8 +19,10 @@ export const App = (elementId) => {
   const displayTodos = () => {
     const todos = todoStore.getTodos(todoStore.getCurrentFilter());
     renderTodos(ElementIDs.TodoList, todos);
+    renderPending(ElementIDs.PendingLabel);
   };
 
+  //When App() is called:
   (() => {
     const app = document.createElement('div');
     app.innerHTML = html;
