@@ -44,4 +44,12 @@ export const App = (elementId) => {
     displayTodos();
   });
 
+  todoListUL.addEventListener('click', (event) => {
+    const element = event.target.closest('[data-id]');
+    if (!element || event.target.className !== 'destroy') return;
+
+    todoStore.deleteTodo(element.getAttribute('data-id'));
+    displayTodos();
+  });
+
 };
