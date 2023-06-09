@@ -9,7 +9,30 @@
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <section class="todoapp">
+      <header class="header">
+        <h1>Shopping list</h1>
+        <input id="new-todo-input" class="new-todo" placeholder="Press enter to add an item..." autofocus>
+      </header>
+
+      <section class="main">
+        <!-- <input id="toggle-all" class="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as complete</label> -->
+        <ul class="todo-list"></ul>
+      </section>
+
+      <footer class="footer">
+        <span class="todo-count"><strong id="pending-count">0</strong> pending</span>
+        <ul class="filters">
+          <li><a class="selected filter" class="selected" href="#/">All</a></li>
+          <li><a class="filter" href="#/active">Pending</a></li>
+          <li><a class="filter" href="#/completed">Completed</a></li>
+        </ul>
+        <button class="clear-completed">Clear completed</button>
+      </footer>
+    </section>
+  </div>
   <script type="module" src="/main.js"></script>
 </body>
 

@@ -1,4 +1,4 @@
-import html from './app.html?raw'; //?raw brings the raw content of the file
+import html from '../../index.html?raw'; //?raw brings the raw content of the file
 import todoStore from '../store/todo.store';
 import { renderTodos, renderPending } from './use-cases';
 
@@ -26,7 +26,7 @@ export const App = (elementId) => {
   (() => {
     const app = document.createElement('div');
     app.innerHTML = html;
-    document.querySelector(elementId).append(app);
+    // document.querySelector(elementId).append(app);
     displayTodos();
   })();
 
