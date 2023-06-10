@@ -11,8 +11,8 @@ export const createTodoHTML = (todo) => {
 
   const html = `<div class="view">
       <input class="toggle" type="checkbox" ${done ? 'checked' : ''}>
-      <label>${description}</label>
-      <button class="destroy"></button>
+      <label class="cursor-pointer my-3 font-caveat text-2xl text-sky-900 ms-2 ${done ? 'line-through decoration-2 decoration-sky-950' : ''}">${description}</label>
+      <button class="destroy ms-1 text-orange-800 font-bold opacity-25 hover:opacity-100">✕</button>
     </div>`;
   
   const liElement = document.createElement('li');

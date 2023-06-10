@@ -8,12 +8,12 @@
   <title>Shopping List App</title>
 </head>
 
-<body>
-  <div id="app">
-    <section class="todoapp">
+<body class="bg-tartan bg-cover bg-fixed bg-left-top">
+  <div id="app" class="flex flex-col items-center justify-center my-12">
+    <section class="todoapp bg-paper bg-cover bg-top p-12 rounded-md shadow-2xl">
       <header class="header">
-        <h1>Shopping list</h1>
-        <input id="new-todo-input" class="new-todo" placeholder="Press enter to add an item..." autofocus>
+        <h1 class="text-5xl my-8 mx-6 font-pacifico text-center text-sky-950">··· Shopping list ···</h1>
+        <input id="new-todo-input" class="new-todo w-full shadow-md mb-5 mt-3 p-2 rounded-md opacity-75 font-caveat text-xl placeholder:font-patrick placeholder:text-slate-900 placeholder:text-lg" placeholder="🥑 Press enter to add an item...">
       </header>
 
       <section class="main">
@@ -24,7 +24,7 @@
 
       <footer class="footer">
         <span class="todo-count"><strong id="pending-count">0</strong> pending</span>
-        <ul class="filters">
+        <ul class="filters flex flex-row">
           <li><a class="selected filter" class="selected" href="#/">All</a></li>
           <li><a class="filter" href="#/active">Pending</a></li>
           <li><a class="filter" href="#/completed">Completed</a></li>

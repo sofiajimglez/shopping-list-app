@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Pacifico&family=Patrick+Hand&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font-family: 'Caveat Brush', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Patrick Hand', cursive; */
+
 html,
 body {
 	margin: 0;
 	padding: 0;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
