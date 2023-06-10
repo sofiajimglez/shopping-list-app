@@ -18,7 +18,7 @@ export const createTodoHTML = (todo) => {
   const liElement = document.createElement('li');
   liElement.innerHTML = html;
   liElement.setAttribute('data-id', id);
-  if (done) liElement.classList.add('completed');
+  if (done) liElement.classList.add('purchased');
 
   return liElement;
 }

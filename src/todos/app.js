@@ -5,7 +5,7 @@ import { renderTodos, renderPending } from './use-cases';
 const ElementIDs = {
   TodoList: '.todo-list',
   NewTodoInput: '#new-todo-input',
-  ClearCompleted: '.clear-completed',
+  ClearPurchased: '.clear-purchased',
   TodoFilters: '.filter',
   PendingLabel: '#pending-count'
 }
@@ -33,7 +33,7 @@ export const App = (elementId) => {
   //HTML References
   const newDescriptionInput = document.querySelector(ElementIDs.NewTodoInput);
   const todoListUL = document.querySelector(ElementIDs.TodoList);
-  const clearCompletedBtn = document.querySelector(ElementIDs.ClearCompleted);
+  const clearPurchasedBtn = document.querySelector(ElementIDs.ClearPurchased);
   const filtersLIs = document.querySelectorAll(ElementIDs.TodoFilters);
 
   //Event Listeners
@@ -59,8 +59,8 @@ export const App = (elementId) => {
     displayTodos();
   });
 
-  clearCompletedBtn.addEventListener('click', () => {
-    todoStore.deleteCompleted();
+  clearPurchasedBtn.addEventListener('click', () => {
+    todoStore.deletePurchased();
     displayTodos();
   });
 
