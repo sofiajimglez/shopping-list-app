@@ -14,3 +14,7 @@ body {
 	padding: 0;
 }
 
+.selected {
+	border-bottom: 3px dotted rgba(12, 74, 110, .9);
+}
+

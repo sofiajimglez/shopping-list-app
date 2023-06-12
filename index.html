@@ -10,7 +10,7 @@
 
 <body class="bg-tartan bg-cover bg-fixed bg-left-top">
   <div id="app" class="flex flex-col items-center justify-center my-12">
-    <section class="todoapp bg-paper bg-cover bg-top p-12 rounded-md shadow-2xl">
+    <section class="todoapp bg-paper bg-cover bg-top px-12 pt-12 pb-5 rounded-md shadow-2xl">
       <header class="header">
         <h1 class="text-5xl my-8 mx-6 font-pacifico text-center text-sky-950">··· Shopping list ···</h1>
         <input id="new-todo-input" class="new-todo w-full shadow-md mb-5 mt-3 p-2 rounded-md opacity-75 font-caveat text-xl placeholder:font-patrick placeholder:text-slate-900 placeholder:text-lg" placeholder="🥑 Press enter to add an item...">
@@ -23,13 +23,15 @@
       </section>
 
       <footer class="footer">
-        <span class="todo-count"><strong id="pending-count">0</strong> pending</span>
-        <ul class="filters flex flex-row">
-          <li><a class="selected filter" class="selected" href="#/">All</a></li>
-          <li><a class="filter" href="#/active">Pending</a></li>
-          <li><a class="filter" href="#/purchased">Purchased</a></li>
+        <ul class="filters flex flex-row justify-around my-4 font-patrick text-xl">
+          <li><a class="selected filter px-2" href="/#">All</a></li>
+          <li><a class="filter px-2" href="#/active">Pending</a></li>
+          <li><a class="filter px-2" href="#/purchased">Purchased</a></li>
         </ul>
-        <button class="clear-purchased">Clear purchased</button>
+        <div class="flex flex-row justify-around align-baseline my-3">
+          <p class="todo-count py-1 font-caveat text-lg text-sky-900">🛒 Items pending: <strong id="pending-count" class="ms-2">0</strong></p>
+          <button class="clear-purchased font-patrick text-slate-50 bg-amber-800 py-1 px-5 rounded-full hover:bg-amber-900 hover:shadow-md hover:translate-y-1">✕ Clear purchased</button>
+        </div>
       </footer>
     </section>
   </div>
