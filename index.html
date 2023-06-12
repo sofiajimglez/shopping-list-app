@@ -6,6 +6,7 @@
   <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopping List App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body class="bg-tartan bg-cover bg-fixed bg-left-top">
@@ -22,19 +23,27 @@
         <ul class="todo-list"></ul>
       </section>
 
-      <footer class="footer">
+      <section class="footer">
         <ul class="filters flex flex-row justify-around my-4 font-patrick text-xl">
-          <li><a class="selected filter px-2" href="/#">All</a></li>
-          <li><a class="filter px-2" href="#/active">Pending</a></li>
-          <li><a class="filter px-2" href="#/purchased">Purchased</a></li>
+          <li><a class="selected filter px-2" href="#all">All</a></li>
+          <li><a class="filter px-2" href="#active">Pending</a></li>
+          <li><a class="filter px-2" href="#purchased">Purchased</a></li>
         </ul>
         <div class="flex flex-row justify-around align-baseline my-3">
           <p class="todo-count py-1 font-caveat text-lg text-sky-900">🛒 Items pending: <strong id="pending-count" class="ms-2">0</strong></p>
           <button class="clear-purchased font-patrick text-slate-50 bg-amber-800 py-1 px-5 rounded-full hover:bg-amber-900 hover:shadow-md hover:translate-y-1">✕ Clear purchased</button>
         </div>
-      </footer>
+      </section>
     </section>
   </div>
+  <footer class="relative mt-24">
+    <div class="absolute inset-x-0 bottom-0 flex flex-row p-1 gap-2 justify-center align-baseline bg-white bg-opacity-60 font-patrick text-lg">
+      <p>2023 🍓 Sofía Jiménez</p>
+      <a href='https://github.com/sofiajimglez' target="_blank"><i class="fa-brands fa-github text-sky-700 hover:text-sky-950"></i></a>
+      <a href='https://www.linkedin.com/in/sofiajimglez/' target="_blank"><i class="fa-brands fa-linkedin text-sky-700 hover:text-sky-950"></i></a>
+    </div>
+
+  </footer>
   <script type="module" src="/main.js"></script>
 </body>
 
